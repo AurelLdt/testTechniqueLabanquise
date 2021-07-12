@@ -1,0 +1,259 @@
+$color1: #33575C;
+$color2: #707070;
+$color3: #F76B0A;
+$color4: #DFDFDF;
+$color5: #be4f00;
+
+* {
+    body {
+        margin : 0;
+        padding: 0;
+
+        header {
+            width           : 100%;
+            height          : 25%;
+            background-color: $color1;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            position        : sticky;
+            top             : 0;
+            z-index         : 9999;
+
+            nav {
+                width          : 60%;
+                margin         : auto;
+                display        : flex;
+                justify-content: stretch;
+                align-items    : center;
+                flex-direction : row;
+                flex-wrap      : wrap;
+
+                @media screen and (max-width: 875px) {
+                    width          : 92%;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    flex-direction : column;
+                    margin         : auto;
+                    transition     : 1s;
+                }
+
+                figure {
+
+                    img.logo {
+                        width: 50%;
+
+                        @media screen and (max-width: 875px) {
+                            width          : 45%;
+                            display        : flex;
+                            align-items    : center;
+                            justify-content: center;
+                            flex-direction : column;
+                            margin         : auto;
+                            margin-bottom  : 10%;
+                            transition     : 1s;
+                        }
+                    }
+
+                }
+
+                ul {
+                    width          : 35%;
+                    display        : flex;
+                    justify-content: space-around;
+                    align-items    : center;
+                    flex-direction : row;
+                    margin         : auto;
+
+                    @media screen and (max-width: 875px) {
+                        width          : 90%;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: space-around;
+                        margin         : auto;
+                        transition     : 1s;
+                        padding-bottom : 2%;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        font-weight    : bold;
+                        color          : $color3;
+
+                        li {
+                            list-style: none;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            width          : 100%;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            flex-direction : column;
+            margin         : auto;
+            color          : $color1;
+
+            section {
+                width: 70%;
+
+                h2 {
+                    font-size  : 2.5em;
+                    font-weight: bold;
+
+                    @media screen and (max-width: 875px) {
+                        width       : 92%;
+                        text-align  : center;
+                        margin-left : auto;
+                        margin-right: auto;
+                    }
+
+                }
+
+                article {
+                    width          : 100%;
+                    display        : flex;
+                    justify-content: start;
+                    align-items    : center;
+                    flex-direction : row;
+                    flex-wrap      : wrap;
+
+                    @media screen and (max-width: 875px) {
+                        width          : 90%;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+                        margin         : auto;
+                        text-align     : justify;
+                    }
+                }
+
+                h3 {
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color          : $color3;
+                    }
+
+                    @media screen and (max-width: 875px) {
+                        width          : 90%;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+                        margin         : auto;
+                    }
+                }
+
+                article.icon {
+                    width          : 100%;
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+                    flex-direction : row;
+                    flex-wrap      : wrap;
+
+                    @media screen and (max-width: 875px) {
+                        width          : 92%;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: space-around;
+                        flex-direction : column;
+                        margin         : auto;
+                    }
+
+                    figure {
+                        background-color: $color4;
+                        width           : 8em;
+                        height          : 8em;
+                        border-radius   : 100%;
+                        display         : flex;
+                        justify-content : center;
+                        align-items     : center;
+
+                        &:hover {
+                            box-shadow: 0em 1em 2em -1em rgba(10, 10, 10, 0.75);
+                        }
+
+                        img {
+                            width     : 50%;
+                            transition: 1s;
+                            cursor    : pointer;
+                            transform : rotate(0deg) scale(1);
+
+
+                            &:active {
+                                transition: 1s;
+                                transform : rotate(360deg) scale(1.2);
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            section.api {
+                width: 70%;
+
+                @media screen and (max-width: 875px) {
+                    width          : 92%;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    flex-direction : column;
+                }
+
+
+                .list-container {
+                    width                : 100%;
+                    display              : grid;
+                    grid-template-columns: auto auto auto auto;
+                    margin-left          : -1%;
+                    padding              : 0;
+
+                    @media screen and (max-width: 875px) {
+                        width          : 92%;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+                        flex-direction : column;
+                    }
+
+                    li {
+                        list-style: none;
+                    }
+
+
+                    .card-container {
+                        width        : auto;
+                        margin       : 5%;
+                        padding      : 10%;
+                        background   : $color1;
+                        color        : $color3;
+                        border-radius: 10%;
+                        text-align   : center;
+                        transition   : 0.3s;
+
+                        &:hover {
+                            transition: 0.3s;
+                            transform : rotate(10deg);
+                            box-shadow: 0em 1em 2em -1em rgba(10, 10, 10, 0.75);
+                        }
+
+                        img {
+                            width: 50%;
+                            border-radius: 50%;
+                            transform    : scale(1);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
