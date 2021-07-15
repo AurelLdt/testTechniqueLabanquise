@@ -246,13 +246,30 @@ $color5: #be4f00;
                         }
 
                         img {
-                            width: 50%;
+                            width        : 50%;
                             border-radius: 50%;
                             transform    : scale(1);
                         }
 
                     }
                 }
+            }
+        }
+
+        footer {
+            width           : 100%;
+            height          : 50px;
+            background-color: $color1;
+            color           : $color4;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            flex-wrap       : wrap;
+
+            @media screen and (max-width: 875px) {
+                height: 80px;
+                text-align: center;
+                margin: 0 10px 0 10px;
             }
         }
     }
